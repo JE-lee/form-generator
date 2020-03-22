@@ -1,0 +1,20 @@
+{
+  "name": "form-generator",
+  "version": "1.0.0",
+  "description": "表单生成器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form",
+    "generator"
+  ],
+  "author": "jelee",
+  "license": "MIT",
+  "dependencies": {
+    "async-validator": "^3.2.4",
+    "dayjs": "^1.8.23",
+    "element-ui": "^2.13.0"
+  }
+}
