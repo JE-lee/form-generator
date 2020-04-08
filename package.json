@@ -4,7 +4,9 @@
   "description": "表单生成器",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "keywords": [
     "form",
@@ -16,5 +18,15 @@
     "async-validator": "^3.2.4",
     "dayjs": "^1.8.23",
     "element-ui": "^2.13.0"
+  },
+  "devDependencies": {
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "markdown-it-vuese": "^0.4.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-live": "^1.5.2"
   }
 }
