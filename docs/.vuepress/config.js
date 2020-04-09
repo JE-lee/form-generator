@@ -21,16 +21,38 @@ module.exports = {
     ],
   ],
   configureWebpack: {
-    /* resolve: {
+    resolve: {
       extensions: [".ts", ".tsx", ".js", ".vue"],
 
     },
     module: {
       rules: [
         // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-        { test: /\.tsx?$/, loader: "ts-loader" }
+        { 
+          test: /\.tsx?$/, 
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                babelrc: false,
+                configFile: false,
+                presets: [
+                  '@vue/babel-preset-jsx'
+                ],
+              },
+            },
+            {
+              loader: 'ts-loader',
+              options: {
+                transpileOnly: true,
+                appendTsxSuffixTo: [/\.vue$/],
+              },
+            },
+          ],
+        }
       ]
-    } */
+    }
   },
   themeConfig: {
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL

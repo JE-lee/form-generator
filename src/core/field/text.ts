@@ -6,6 +6,7 @@ export default class Text extends Field {
     super(group)
     this.valueType = valueType.string
     this.required = true
+    this.max = 64
   }
   getRules(){
     const rules = super.getRules()

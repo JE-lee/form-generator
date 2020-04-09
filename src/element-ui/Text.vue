@@ -9,7 +9,7 @@
   </form-item>
 </template>
 
-<script lang="tsx">
+<script>
 import { Input } from "element-ui";
 import FormItem from "./FormItem.vue";
 import Text from "../core/field/text";
@@ -20,11 +20,15 @@ export default {
       required: true
     }
   },
-  setup() {
+  data(){
     const text = new Text(this.group);
-    const validate = () => text.validate()
     return {
-      validate
+      field: text
+    }
+  },
+  computed: {
+    validate(){
+      return this.field.validate.bind(this.field)
     }
   },
   components: {
